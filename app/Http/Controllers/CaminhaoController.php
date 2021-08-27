@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\ModelCaminhao;
+use App\Models\Tb_Caminhao;
 
 
 class CaminhaoController extends Controller
@@ -37,10 +37,11 @@ class CaminhaoController extends Controller
      */
     public function store(Request $request)
     {
-        ModelCaminhao::create([
+        Tb_caminhao::create([
             'numero_caminhao' => $request->numero_caminhao,
             'placa' => $request->placa, 
             'descricao' => $request->descricao,
+            'marca' => $request->marca,
             'modelo' => $request->modelo,
             'chassi'=> $request->chassi, 
             'ano' => $request->ano, 
@@ -48,6 +49,7 @@ class CaminhaoController extends Controller
         ]);
 
         return view('home');
+        
     }
 
     /**

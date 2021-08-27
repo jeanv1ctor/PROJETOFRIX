@@ -9,13 +9,40 @@
         <form action="{{route('salvar_caminhao')}}" method="post">
         @csrf
         <div class="form-group">
-            <label for="exampleInputText">Número do caminhão</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <label for="Número do Caminhao">Número do veículo</label>
+            <input type="text" class="form-control" name="numero_caminhao" id="numero_caminhao" aria-describedby="emailHelp">
         </div>
         <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-        </div><br>
+            <label for="Placa ">Placa do veículo</label>
+            <input type="text" class="form-control" name="numero_caminhao" id="placa" aria-describedby="emailHelp">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputText">Descrição</label>
+            <input type="text" class="form-control" name="numero_caminhao" id="descricao" aria-describedby="emailHelp">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputText">Marca</label>
+            <input type="text" class="form-control" name="numero_caminhao" id="marca" aria-describedby="emailHelp">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputText">Modelo</label>
+            <input type="text" class="form-control" name="numero_caminhao" id="modelo" aria-describedby="emailHelp">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputText">Chassi</label>
+            <input type="text" class="form-control" name="numero_caminhao" id="chassi" aria-describedby="emailHelp">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputText">Ano</label>
+            <input type="text" class="form-control" name="numero_caminhao" id="ano" aria-describedby="emailHelp">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputText">Fabricação</label>
+            <input type="text" class="form-control" name="numero_caminhao" id="fabricacao" aria-describedby="emailHelp">
+        </div>
+
+
+        <br>
         <button type="submits" class="btn btn-primary">Cadastrar</button>
         </form>
     </div>

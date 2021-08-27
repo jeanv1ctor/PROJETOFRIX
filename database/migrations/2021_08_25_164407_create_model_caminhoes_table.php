@@ -18,6 +18,7 @@ class CreateModelCaminhoesTable extends Migration
             $table->integer('numero_caminhao');
             $table->string('placa');
             $table->string('descricao');
+            $table->string('marca');
             $table->string('modelo');
             $table->string('chassi');
             $table->integer('ano');

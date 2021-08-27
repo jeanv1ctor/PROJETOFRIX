@@ -14,7 +14,7 @@
                 <ul class="sidebar-navigation">
                     <li class="header">MENU</li>
                     <li>
-                    <a href="#">
+                    <a href="{{route('home')}}">
                         <i class="fa fa-home" aria-hidden="true"></i> Inicio
                     </a>
                     </li>

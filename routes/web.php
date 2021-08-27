@@ -21,9 +21,10 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-/*rota para cadastrar caminhao*/ 
+/*rota para cadastrar veiculo*/ 
 Route::get('/caminhao/novo', 'CaminhaoController@create')->name('cadastra_caminhao');
 
-/*rota para enviar o preenchimento do fomulario*/
-Route::post('/caminhao/novo', 'CaminhaoController@store')->name('salva_caimnhao');
+/*rota para enviar o  fomulario preenchido*/
+Route::post('/caminhao/novo', 'CaminhaoController@store')->name('salvar_caminhao');
 
+/*rora para listar 
