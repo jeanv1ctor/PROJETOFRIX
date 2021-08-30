@@ -14,31 +14,31 @@
         </div>
         <div class="form-group">
             <label for="Placa ">Placa do veículo</label>
-            <input type="text" class="form-control" name="numero_caminhao" id="placa" aria-describedby="emailHelp">
+            <input type="text" class="form-control" name="placa" id="placa" aria-describedby="emailHelp">
         </div>
         <div class="form-group">
             <label for="exampleInputText">Descrição</label>
-            <input type="text" class="form-control" name="numero_caminhao" id="descricao" aria-describedby="emailHelp">
+            <input type="text" class="form-control" name="descricao" id="descricao" aria-describedby="emailHelp">
         </div>
         <div class="form-group">
             <label for="exampleInputText">Marca</label>
-            <input type="text" class="form-control" name="numero_caminhao" id="marca" aria-describedby="emailHelp">
+            <input type="text" class="form-control" name="marca" id="marca" aria-describedby="emailHelp">
         </div>
         <div class="form-group">
             <label for="exampleInputText">Modelo</label>
-            <input type="text" class="form-control" name="numero_caminhao" id="modelo" aria-describedby="emailHelp">
+            <input type="text" class="form-control" name="modelo" id="modelo" aria-describedby="emailHelp">
         </div>
         <div class="form-group">
             <label for="exampleInputText">Chassi</label>
-            <input type="text" class="form-control" name="numero_caminhao" id="chassi" aria-describedby="emailHelp">
+            <input type="text" class="form-control" name="chassi" id="chassi" aria-describedby="emailHelp">
         </div>
         <div class="form-group">
             <label for="exampleInputText">Ano</label>
-            <input type="text" class="form-control" name="numero_caminhao" id="ano" aria-describedby="emailHelp">
+            <input type="text" class="form-control" name="ano" id="ano" aria-describedby="emailHelp">
         </div>
         <div class="form-group">
             <label for="exampleInputText">Fabricação</label>
-            <input type="text" class="form-control" name="numero_caminhao" id="fabricacao" aria-describedby="emailHelp">
+            <input type="text" class="form-control" name="fabricacao" id="fabricacao" aria-describedby="emailHelp">
         </div>
 
 

@@ -24,7 +24,7 @@
                     </a>
                     </li>
                     <li>
-                    <a href="#">
+                    <a href="{{route('lista_caminhao')}}">
                         <i class="fa fa-users" aria-hidden="true"></i> Lista de veículos
                     </a>
                     </li>

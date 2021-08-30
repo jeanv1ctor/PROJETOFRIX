@@ -58,9 +58,12 @@ class CaminhaoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-        //
+        
+        $caminhao =  Tb_caminhao::all();
+
+        return view('caminhao.show', ['caminhao' => $caminhao]);
     }
 
     /**
@@ -71,7 +74,9 @@ class CaminhaoController extends Controller
      */
     public function edit($id)
     {
-        //
+        $caminhao = Tb_caminhao::findOrFail($id);
+        
+        return view('caminhao.edit');
     }
 
     /**
@@ -94,6 +99,9 @@ class CaminhaoController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $caminhao=Tb_caminhao::findOrFail($id);
+        $caminhao->delete();
+
+        return view('caminhao.show');
     }
 }
