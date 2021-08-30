@@ -9,14 +9,14 @@
         <table class="table table-striped">
             <thead>
                 <tr>
-                <th scope="col">Nº Caminhão</th>
-                <th scope="col">Placa</th>
-                <th scope="col">Descrição</th>
-                <th scope="col">Marca</th>
-                <th scope="col">Modelo</th>
-                <th scope="col">Chassi</th>
-                <th scope="col">Ano</th>
-                <th scope="col">Fabricação</th>
+                <th scope="col">Nº CAMINHÃO</th>
+                <th scope="col">PLACA</th>
+                <th scope="col">DESCRIÇÃO</th>
+                <th scope="col">MARCA</th>
+                <th scope="col">MODELO</th>
+                <th scope="col">CHASSI</th>
+                <th scope="col">ANO</th>
+                <th scope="col">FABRICAÇÃO</th>
                 </tr>
             </thead>
             
@@ -31,8 +31,8 @@
                 <td>{{$caminhao->chassi}}</td>
                 <td>{{$caminhao->ano}}</td>
                 <td>{{$caminhao->fabricacao}}</td>
-                <td><button type="button" class="btn btn-success"><a href="{{route('editar_caminhao', ['id'=>$caminhao->id])}}">Editar</a></button></td>
-                <td><button type="button" class="btn btn-danger"><a href="{{route('exclui_caminhao', ['id'=>$caminhao->id])}}">Excluir</a></button></td>
+                <td><a class="btn btn-success" href="{{route('editar_caminhao', ['id'=>$caminhao->id])}}" role="buttons">Editar</a></td>
+                <td><a class="btn btn-danger" href="{{route('exclui_caminhao', ['id'=>$caminhao->id])}}" role="buttons">Excluir</a></td>
                 </tr>
             </tbody>
 

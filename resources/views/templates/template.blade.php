@@ -29,7 +29,7 @@
                     </a>
                     </li>
                     <li>
-                    <a href="#">
+                    <a href="{{route('abastece')}}">
                         <i class="fa fa-cog" aria-hidden="true"></i> Abastecimento
                     </a>
                     </li>
@@ -40,6 +40,7 @@
 </head>
 <body>
     @yield('content')
+    <script src="{{url('assets/bootstrap/js/bootstrap.js')}}"></script>
 </body>
 </html>
 

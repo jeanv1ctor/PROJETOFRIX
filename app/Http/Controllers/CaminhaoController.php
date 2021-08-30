@@ -75,8 +75,10 @@ class CaminhaoController extends Controller
     public function edit($id)
     {
         $caminhao = Tb_caminhao::findOrFail($id);
+
+
         
-        return view('caminhao.edit');
+        return view('caminhao.edit', ['caminhao'=>$caminhao]);
     }
 
     /**
@@ -88,7 +90,20 @@ class CaminhaoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $caminhao = Tb_caminhao::findOrFail($id);
+
+        $caminhao->update([
+            'numero_caminhao' => $request->numero_caminhao,
+            'placa' => $request->placa, 
+            'descricao' => $request->descricao,
+            'marca' => $request->marca,
+            'modelo' => $request->modelo,
+            'chassi'=> $request->chassi, 
+            'ano' => $request->ano, 
+            'fabricacao'=>$request->fabricacao
+        ]);
+
+        return view('home');
     }
 
     /**

@@ -31,14 +31,18 @@ Route::post('/caminhao/novo', 'CaminhaoController@store')->name('salvar_caminhao
 Route::get('/caminhao/lista', 'CaminhaoController@show')->name('lista_caminhao');
 
 
-/*rota para editar veículo*/
+/*rota para a pagina de editar veículo*/
 
 Route::get('/caminhao/editar/{id}', 'CaminhaoController@edit')->name('editar_caminhao');
 
 /*rota para salvar a edição do veículo*/
 
-Route::post('/caminhao/editar/{id}', 'CaminhaoController@edit')->name('atualiza_caminhao');
+Route::post('/caminhao/editar/{id}', 'CaminhaoController@update')->name('atualiza_caminhao');
 
 /*rota para excluir veículo*/
 Route::get('/caminhao/excluir/{id}', 'CaminhaoController@destroy')->name('exclui_caminhao');
 
+
+/*rota para a pagina do abastecimento*/
+
+Route::get('/abastecimento/registrar', 'AbastecimentoController@create')->name('abastece');

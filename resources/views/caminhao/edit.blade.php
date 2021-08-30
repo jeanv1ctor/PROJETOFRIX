@@ -4,9 +4,9 @@
 
 <div class="container h-100">
     <br><br>
-    <h1 class="text-center display-6">Cadastrar Veículo</h1>
+    <h1 class="text-center display-6">Editar Veículo</h1>
     <div class="w-auto p-3">
-        <form action="{{route('atualiza_caminhao', ['id' => $caminhao->id])}}" method="post">
+        <form action="{{route('atualiza_caminhao', ['id'=>$caminhao->id])}}" method="post">
         @csrf
         <div class="form-group">
             <label for="Número do Caminhao">Número do veículo</label>
@@ -43,7 +43,7 @@
 
 
         <br>
-        <button type="submits" class="btn btn-primary">Cadastrar</button>
+        <button type="submits" class="btn btn-primary">Atualizar</button>
         </form>
     </div>
 </div>
