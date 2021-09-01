@@ -9,15 +9,25 @@
         <form action="" method="post">
         @csrf
         <div class="form-group">
-            <label for="Número do Caminhao">Caminhão</label>
-            <input type="text" class="form-control" name="numero_caminhao" id="numero_caminhao" aria-describedby="emailHelp">
+            <label for="exampleFormControlSelect1">Selecione o veículo</label>
+            
+
+            <select class="form-control" id="exampleFormControlSelect1">
+            
+            @foreach($caminhao as $caminhao)
+            <option>{{$caminhao->numero_caminhao}}</option>
+
+            @endforeach
+            </select>
+
+
         </div>
         <div class="form-group">
             <label for="Placa ">Quantidade abastecida (em litros)</label>
             <input type="text" class="form-control" name="placa" id="placa" aria-describedby="emailHelp">
         </div>
         <div class="form-group">
-            <label for="exampleInputText">Kilometragem do caminhão</label>
+            <label for="exampleInputText">KM do veículo</label>
             <input type="text" class="form-control" name="descricao" id="descricao" aria-describedby="emailHelp">
         </div>
 
@@ -26,4 +36,5 @@
         </form>
     </div>
 </div>
+
 @endsection

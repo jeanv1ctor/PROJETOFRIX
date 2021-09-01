@@ -15,7 +15,9 @@ class CreateAbastecimentosTable extends Migration
     {
         Schema::create('tb_abastecimento', function (Blueprint $table) {
             $table->id();
-
+            $table->integer('num_caminhao');
+            $table->double('litros');
+            $table->double('km');
             $table->timestamps();
         });
     }

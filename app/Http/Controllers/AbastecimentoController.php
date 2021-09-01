@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Abastecimento;
 use Illuminate\Http\Request;
+use App\Models\Tb_Caminhao;
 
 class AbastecimentoController extends Controller
 {
@@ -24,7 +25,8 @@ class AbastecimentoController extends Controller
      */
     public function create()
     {
-        return view('abastecimento.create');
+        $caminhao =  Tb_caminhao::all();
+        return view('abastecimento.create', ['caminhao' => $caminhao]);
     }
 
     /**
