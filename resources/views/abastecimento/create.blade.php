@@ -12,20 +12,20 @@
 
         <div class="form-group">
             <label for="Número do veículo">Número do veículo</label>
-            <input type="text" class="form-control" name="numero_caminhao" id="numero_caminhao" aria-describedby="emailHelp">
+            <input type="text" class="form-control" name="numero_caminhao" id="numero_caminhao" required aria-describedby="emailHelp">
         </div>
         
         <div class="form-group">
             <label for="Quantidade abastecida">Quantidade abastecida (em litros)</label>
-            <input type="text" class="form-control" name="quantidade_diesel" id="quatidade_diesel" aria-describedby="emailHelp">
+            <input type="text" class="form-control" name="quantidade_diesel" id="quatidade_diesel" required aria-describedby="emailHelp">
         </div>
         <div class="form-group">
             <label for="KM">KM do veículo</label>
-            <input type="text" class="form-control" name="km" id="km" aria-describedby="emailHelp">
+            <input type="text" class="form-control" name="km" id="km" required aria-describedby="emailHelp">
         </div>
         <div class="form-group">
-            <label for="Carga">CARGA</label>
-            <input type="text" class="form-control" name="carga" id="carga" aria-describedby="emailHelp">
+            <label for="Carga">Carga</label>
+            <input type="text" class="form-control" name="carga" id="carga"  aria-describedby="emailHelp">
         </div>
 
         <br>
