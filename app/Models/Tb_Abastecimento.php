@@ -12,6 +12,6 @@ class Tb_abastecimento extends Model
     
     //use HasFactory;
     public $table = "tb_abastecimento";
-    protected $fillable = ['num_caminhao', 'litros', 'km'];
+    protected $fillable = ['numero_caminhao', 'quantidade_diesel', 'km', 'carga'];
     
 }

@@ -24,7 +24,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 /*rota para cadastrar veiculo*/ 
 Route::get('/caminhao/novo', 'CaminhaoController@create')->name('cadastra_caminhao');
 
-/*rota para enviar o  fomulario preenchido*/
+/*rota para enviar o  fomulario preenchido do cadastro*/
 Route::post('/caminhao/novo', 'CaminhaoController@store')->name('salvar_caminhao');
 
 /*rota para listar os veículos*/ 
@@ -43,6 +43,15 @@ Route::post('/caminhao/editar/{id}', 'CaminhaoController@update')->name('atualiz
 Route::get('/caminhao/excluir/{id}', 'CaminhaoController@destroy')->name('exclui_caminhao');
 
 
-/*rota para a pagina do abastecimento*/
+/*rota para a pagina de registrar abastecimento*/
 
 Route::get('/abastecimento/registrar', 'AbastecimentoController@create')->name('abastece');
+
+
+/*rota para enviar o formulario preenchido do abastecimento*/ 
+Route::post('/abastecimento/registrar', 'AbastecimentoController@store')->name('salvar_abastecimento');
+
+
+/*rota para  listar abastecimento*/
+
+Route::get('/abastecimento/historico', 'AbastecimentoController@show')->name('lista_abastecimento');

@@ -37,7 +37,8 @@ class CaminhaoController extends Controller
      */
     public function store(Request $request)
     {
-        Tb_caminhao::create([
+    
+        Tb_caminhao::firstOrCreate([
             'numero_caminhao' => $request->numero_caminhao,
             'placa' => $request->placa, 
             'descricao' => $request->descricao,
@@ -117,6 +118,6 @@ class CaminhaoController extends Controller
         $caminhao=Tb_caminhao::findOrFail($id);
         $caminhao->delete();
 
-        return view('caminhao.show');
+        return view('home');
     }
 }

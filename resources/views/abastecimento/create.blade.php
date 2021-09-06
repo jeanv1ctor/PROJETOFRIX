@@ -6,33 +6,31 @@
     <br><br>
     <h1 class="text-center display-6">Registrar Abastecimento</h1>
     <div class="w-auto p-3">
-        <form action="" method="post">
+        <form action="{{route('salvar_abastecimento')}}" method="post">
+        
         @csrf
+
         <div class="form-group">
-            <label for="exampleFormControlSelect1">Selecione o veículo</label>
-            
-
-            <select class="form-control" id="exampleFormControlSelect1">
-            
-            @foreach($caminhao as $caminhao)
-            <option>{{$caminhao->numero_caminhao}}</option>
-
-            @endforeach
-            </select>
-
-
+            <label for="Número do veículo">Número do veículo</label>
+            <input type="text" class="form-control" name="numero_caminhao" id="numero_caminhao" aria-describedby="emailHelp">
+        </div>
+        
+        <div class="form-group">
+            <label for="Quantidade abastecida">Quantidade abastecida (em litros)</label>
+            <input type="text" class="form-control" name="quantidade_diesel" id="quatidade_diesel" aria-describedby="emailHelp">
         </div>
         <div class="form-group">
-            <label for="Placa ">Quantidade abastecida (em litros)</label>
-            <input type="text" class="form-control" name="placa" id="placa" aria-describedby="emailHelp">
+            <label for="KM">KM do veículo</label>
+            <input type="text" class="form-control" name="km" id="km" aria-describedby="emailHelp">
         </div>
         <div class="form-group">
-            <label for="exampleInputText">KM do veículo</label>
-            <input type="text" class="form-control" name="descricao" id="descricao" aria-describedby="emailHelp">
+            <label for="Carga">CARGA</label>
+            <input type="text" class="form-control" name="carga" id="carga" aria-describedby="emailHelp">
         </div>
 
         <br>
         <button type="submits" class="btn btn-primary">Registrar</button>
+        <a class="btn btn-success" href="{{route('lista_abastecimento')}}" role="buttons" style="float: right">Histórico</a>
         </form>
     </div>
 </div>

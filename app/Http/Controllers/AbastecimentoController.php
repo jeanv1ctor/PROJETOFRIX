@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Abastecimento;
 use Illuminate\Http\Request;
+use App\Models\Tb_Abastecimento;
 use App\Models\Tb_Caminhao;
 
 class AbastecimentoController extends Controller
@@ -25,8 +26,8 @@ class AbastecimentoController extends Controller
      */
     public function create()
     {
-        $caminhao =  Tb_caminhao::all();
-        return view('abastecimento.create', ['caminhao' => $caminhao]);
+
+        return view('abastecimento.create');
     }
 
     /**
@@ -37,7 +38,16 @@ class AbastecimentoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        Tb_abastecimento::create([
+            'numero_caminhao' => $request->numero_caminhao,
+            'quantidade_diesel' => $request->quantidade_diesel, 
+            'km' => $request->km,
+            'carga' => $request->carga
+        ]);
+
+        return view('home');
+        
     }
 
     /**
@@ -46,9 +56,11 @@ class AbastecimentoController extends Controller
      * @param  \App\Abastecimento  $abastecimento
      * @return \Illuminate\Http\Response
      */
-    public function show(Abastecimento $abastecimento)
+    public function show()
     {
-        //
+        $abastecimento =  Tb_abastecimento::all();
+
+        return view('abastecimento.show', ['abastecimento' => $abastecimento]);
     }
 
     /**
