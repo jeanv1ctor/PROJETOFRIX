@@ -32,8 +32,17 @@
                     <a href="{{route('abastece')}}">
                         <i class="fa fa-cog" aria-hidden="true"></i> Abastecimento
                     </a>
-                    </li>
-                    <li>                   
+                    </li>  
+                    
+                    <li class="deslogar">
+                        <a class="log-out-btn" href="#" onclick="event.preventDefault();document.getElementById('logout-form').submit();"> 
+                            <i class="fa fa-cog" aria-hidden="true"></i> Sair
+                        </a>
+
+                    </li>   
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            {{ csrf_field() }}
+                    </form>               
                 </ul>
             </div>
         </div>
