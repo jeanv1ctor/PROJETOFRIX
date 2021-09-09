@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,47 +14,56 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/**rota para redirecionar para a home */
 Route::get('/', function () {
-    return view('home');
-});
+    return view('auth.login');
+})->name('login');
+
 
 Auth::routes();
 
-Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 
-Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
-
-/*rota para cadastrar veiculo*/ 
-Route::get('/caminhao/novo', 'CaminhaoController@create')->name('cadastra_caminhao')->middleware('auth');
-
-/*rota para enviar o  fomulario preenchido do cadastro*/
-Route::post('/caminhao/novo', 'CaminhaoController@store')->name('salvar_caminhao')->middleware('auth');
-
-/*rota para listar os veículos*/ 
-Route::get('/caminhao/lista', 'CaminhaoController@show')->name('lista_caminhao')->middleware('auth');
+Route::group(['middleware'=>'auth'],function(){
 
 
-/*rota para a pagina de editar veículo*/
 
-Route::get('/caminhao/editar/{id}', 'CaminhaoController@edit')->name('editar_caminhao')->middleware('auth');
+    Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 
-/*rota para salvar a edição do veículo*/
+    Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
 
-Route::post('/caminhao/editar/{id}', 'CaminhaoController@update')->name('atualiza_caminhao')->middleware('auth');
+    /*rota para cadastrar veiculo*/ 
+    Route::get('/caminhao/novo', 'CaminhaoController@create')->name('cadastra_caminhao');
 
-/*rota para excluir veículo*/
-Route::get('/caminhao/excluir/{id}', 'CaminhaoController@destroy')->name('exclui_caminhao')->middleware('auth');
+    /*rota para enviar o  fomulario preenchido do cadastro*/
+    Route::post('/caminhao/novo', 'CaminhaoController@store')->name('salvar_caminhao');
 
-
-/*rota para a pagina de registrar abastecimento*/
-
-Route::get('/abastecimento/registrar', 'AbastecimentoController@create')->name('abastece');
+    /*rota para listar os veículos*/ 
+    Route::get('/caminhao/lista', 'CaminhaoController@show')->name('lista_caminhao');
 
 
-/*rota para enviar o formulario preenchido do abastecimento*/ 
-Route::post('/abastecimento/registrar', 'AbastecimentoController@store')->name('salvar_abastecimento')->middleware('auth');
+    /*rota para a pagina de editar veículo*/
+
+    Route::get('/caminhao/editar/{id}', 'CaminhaoController@edit')->name('editar_caminhao');
+
+    /*rota para salvar a edição do veículo*/
+
+    Route::post('/caminhao/editar/{id}', 'CaminhaoController@update')->name('atualiza_caminhao');
+
+    /*rota para excluir veículo*/
+    Route::get('/caminhao/excluir/{id}', 'CaminhaoController@destroy')->name('exclui_caminhao');
 
 
-/*rota para  listar abastecimento*/
+    /*rota para a pagina de registrar abastecimento*/
 
-Route::get('/abastecimento/historico', 'AbastecimentoController@show')->name('lista_abastecimento')->middleware('auth');
+    Route::get('/abastecimento/registrar', 'AbastecimentoController@create')->name('abastece');
+
+
+    /*rota para enviar o formulario preenchido do abastecimento*/ 
+    Route::post('/abastecimento/registrar', 'AbastecimentoController@store')->name('salvar_abastecimento');
+
+
+    /*rota para  listar abastecimento*/
+
+    Route::get('/abastecimento/historico', 'AbastecimentoController@show')->name('lista_abastecimento');
+
+});
