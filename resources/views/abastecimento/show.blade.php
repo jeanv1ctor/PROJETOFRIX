@@ -24,7 +24,7 @@
                 <th>{{$abastecimento->quantidade_diesel}}</th>
                 <th>{{$abastecimento->km}}</th>
                 <th>{{$abastecimento->carga}}</th>
-                <th>{{$abastecimento->created_at->format('d/m/y H:i:s')}}</th>
+                <th>{{$abastecimento->created_at->format('d/m/y H:i:s')}}</th>>
                 </tr>
             </tbody>
             @endforeach

@@ -6,6 +6,7 @@ use App\Abastecimento;
 use Illuminate\Http\Request;
 use App\Models\Tb_Abastecimento;
 use App\Models\Tb_Caminhao;
+use App\User;
 
 class AbastecimentoController extends Controller
 {
@@ -13,10 +14,21 @@ class AbastecimentoController extends Controller
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
+     * 
+     * 
+     * 
      */
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+
+
     public function index()
     {
-        //
+        
     }
 
     /**

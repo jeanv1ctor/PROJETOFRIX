@@ -21,28 +21,28 @@ Auth::routes();
 
 Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
 
 /*rota para cadastrar veiculo*/ 
-Route::get('/caminhao/novo', 'CaminhaoController@create')->name('cadastra_caminhao');
+Route::get('/caminhao/novo', 'CaminhaoController@create')->name('cadastra_caminhao')->middleware('auth');
 
 /*rota para enviar o  fomulario preenchido do cadastro*/
-Route::post('/caminhao/novo', 'CaminhaoController@store')->name('salvar_caminhao');
+Route::post('/caminhao/novo', 'CaminhaoController@store')->name('salvar_caminhao')->middleware('auth');
 
 /*rota para listar os veículos*/ 
-Route::get('/caminhao/lista', 'CaminhaoController@show')->name('lista_caminhao');
+Route::get('/caminhao/lista', 'CaminhaoController@show')->name('lista_caminhao')->middleware('auth');
 
 
 /*rota para a pagina de editar veículo*/
 
-Route::get('/caminhao/editar/{id}', 'CaminhaoController@edit')->name('editar_caminhao');
+Route::get('/caminhao/editar/{id}', 'CaminhaoController@edit')->name('editar_caminhao')->middleware('auth');
 
 /*rota para salvar a edição do veículo*/
 
-Route::post('/caminhao/editar/{id}', 'CaminhaoController@update')->name('atualiza_caminhao');
+Route::post('/caminhao/editar/{id}', 'CaminhaoController@update')->name('atualiza_caminhao')->middleware('auth');
 
 /*rota para excluir veículo*/
-Route::get('/caminhao/excluir/{id}', 'CaminhaoController@destroy')->name('exclui_caminhao');
+Route::get('/caminhao/excluir/{id}', 'CaminhaoController@destroy')->name('exclui_caminhao')->middleware('auth');
 
 
 /*rota para a pagina de registrar abastecimento*/
@@ -51,9 +51,9 @@ Route::get('/abastecimento/registrar', 'AbastecimentoController@create')->name('
 
 
 /*rota para enviar o formulario preenchido do abastecimento*/ 
-Route::post('/abastecimento/registrar', 'AbastecimentoController@store')->name('salvar_abastecimento');
+Route::post('/abastecimento/registrar', 'AbastecimentoController@store')->name('salvar_abastecimento')->middleware('auth');
 
 
 /*rota para  listar abastecimento*/
 
-Route::get('/abastecimento/historico', 'AbastecimentoController@show')->name('lista_abastecimento');
+Route::get('/abastecimento/historico', 'AbastecimentoController@show')->name('lista_abastecimento')->middleware('auth');
