@@ -38,8 +38,10 @@ class AbastecimentoController extends Controller
      */
     public function create()
     {
+        $caminhao =  Tb_caminhao::all();
 
-        return view('abastecimento.create');
+        
+        return view('abastecimento.create',  ['caminhao' => $caminhao]);
     }
 
     /**
@@ -53,7 +55,8 @@ class AbastecimentoController extends Controller
 
         Tb_abastecimento::create([
             'numero_caminhao' => $request->numero_caminhao,
-            'quantidade_diesel' => $request->quantidade_diesel, 
+            'quantidade_abastecida' => $request->quantidade_abastecida, 
+            'tipo_combustivel'=>$request->tipo_combustivel,
             'km' => $request->km,
             'carga' => $request->carga
         ]);

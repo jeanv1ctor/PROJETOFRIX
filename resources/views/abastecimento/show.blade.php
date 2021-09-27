@@ -9,8 +9,9 @@
         <table class="table table-striped">
             <thead>
                 <tr>
-                <th scope="col">Nº CAMINHÃO</th>
+                <th scope="col">Nº DO VEÍCULO</th>
                 <th scope="col">QUANTIDADE ABASTECIDA (LITROS)</th>
+                <th scope="col">TIPO DE COMBUSTIVEL</th>
                 <th scope="col">KM</th>
                 <th scope="col">CARGA</th>
                 <th scope="col">DATA/HORÁRIO</th>
@@ -21,7 +22,8 @@
             <tbody>
                 <tr>
                 <th scope="row">{{$abastecimento->numero_caminhao}}</th>
-                <th>{{$abastecimento->quantidade_diesel}}</th>
+                <th>{{$abastecimento->quantidade_abastecida}}</th>
+                <th>{{$abastecimento->tipo_combustivel}}</th>
                 <th>{{$abastecimento->km}}</th>
                 <th>{{$abastecimento->carga}}</th>
                 <th>{{$abastecimento->created_at->format('d/m/y H:i:s')}}</th>>

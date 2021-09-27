@@ -9,7 +9,7 @@
         <table class="table table-striped">
             <thead>
                 <tr>
-                <th scope="col">Nº CAMINHÃO</th>
+                <th scope="col">Nº DO VEÍCULO</th>
                 <th scope="col">PLACA</th>
                 <th scope="col">DESCRIÇÃO</th>
                 <th scope="col">MARCA</th>

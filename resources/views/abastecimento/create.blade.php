@@ -9,16 +9,32 @@
         <form action="{{route('salvar_abastecimento')}}" method="post">
         
         @csrf
-
         <div class="form-group">
-            <label for="Número do veículo">Número do veículo</label>
-            <input type="text" class="form-control" name="numero_caminhao" id="numero_caminhao" required aria-describedby="emailHelp">
+            <label for="exampleDataList" class="form-label">Número do veículo</label>
+            <input class="form-control" list="datalistOptions" id="exampleDataList" name="numero_caminhao" id="numero_caminhao" placeholder="Digite para pesquisar...">
+
+       
+            <datalist id="datalistOptions">
+            @foreach($caminhao as $caminhao) 
+                <option value="{{$caminhao->numero_caminhao}}">
+            @endforeach
+            </datalist>
         </div>
         
         <div class="form-group">
             <label for="Quantidade abastecida">Quantidade abastecida (em litros)</label>
-            <input type="text" class="form-control" name="quantidade_diesel" id="quatidade_diesel" required aria-describedby="emailHelp">
+            <input type="text" class="form-control" name="quantidade_abastecida" id="quatidade_abastecida" required aria-describedby="emailHelp">
         </div>
+
+        <div class="form-group">
+            <label for="Tipo de combustivel">Tipo de combustível</label>
+            <select class="form-select" aria-label="Default select example" name="tipo_combustivel" id="tipo_combustivel">
+                <option value="Diesel">Diesel</option>
+                <option value="Alcool">Alcool</option>
+                <option value="Gasolina">Gasolina</option>
+            </select>
+        </div> 
+
         <div class="form-group">
             <label for="KM">KM do veículo</label>
             <input type="text" class="form-control" name="km" id="km" required aria-describedby="emailHelp">
