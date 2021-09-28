@@ -53,13 +53,23 @@ class AbastecimentoController extends Controller
     public function store(Request $request)
     {
 
-        Tb_abastecimento::create([
-            'numero_caminhao' => $request->numero_caminhao,
-            'quantidade_abastecida' => $request->quantidade_abastecida, 
-            'tipo_combustivel'=>$request->tipo_combustivel,
-            'km' => $request->km,
-            'carga' => $request->carga
-        ]);
+        if (Tb_caminhao::where('numero_caminhao', $request->numero_caminhao)->first()){
+
+            Tb_abastecimento::create([
+                'numero_caminhao' => $request->numero_caminhao,
+                'quantidade_abastecida' => $request->quantidade_abastecida, 
+                'tipo_combustivel'=>$request->tipo_combustivel,
+                'km' => $request->km,
+                'carga' => $request->carga
+            ]);
+
+        }
+    
+        else{
+             // It does not exist
+             return redirect()->back()->with(['message' => 'Veículo não cadastrado!']);
+
+        }
 
         return view('home');
         

@@ -5,13 +5,22 @@
 <div class="container h-100">
     <br><br>
     <h1 class="text-center display-6">Registrar Abastecimento</h1>
+
+    @if(session()->has('message'))
+        <div class="alert alert-danger">
+            {{ session('message') }}
+        </div>
+     @endif
+
     <div class="w-auto p-3">
+
+
         <form action="{{route('salvar_abastecimento')}}" method="post">
         
         @csrf
         <div class="form-group">
             <label for="exampleDataList" class="form-label">Número do veículo</label>
-            <input class="form-control" list="datalistOptions" id="exampleDataList" name="numero_caminhao" id="numero_caminhao" placeholder="Digite para pesquisar...">
+            <input class="form-control" list="datalistOptions"  name="numero_caminhao" id="numero_caminhao" required placeholder="Digite para pesquisar...">
 
        
             <datalist id="datalistOptions">
