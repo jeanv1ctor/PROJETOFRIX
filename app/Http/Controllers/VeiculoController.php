@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Tb_Caminhao;
+use App\Models\Tb_Veiculo;
 
 
-class CaminhaoController extends Controller
+class veiculoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -33,7 +33,7 @@ class CaminhaoController extends Controller
     public function create()
     {
         
-        return view('caminhao.create');
+        return view('veiculo.create');
     }
 
     /**
@@ -44,14 +44,16 @@ class CaminhaoController extends Controller
      */
     public function store(Request $request)
     {
-    
-        Tb_caminhao::firstOrCreate([
-            'numero_caminhao' => $request->numero_caminhao,
+    // função para criar um novo registro de veiculo
+
+        Tb_veiculo::firstOrCreate([ 
+            'numero_veiculo' => $request->numero_veiculo,
             'placa' => $request->placa, 
             'descricao' => $request->descricao,
             'marca' => $request->marca,
             'modelo' => $request->modelo,
-            'chassi'=> $request->chassi, 
+            'chassi'=> $request->chassi,
+            'eixo'=> $request->eixo, 
             'ano' => $request->ano, 
             'fabricacao'=>$request->fabricacao
         ]);
@@ -68,10 +70,11 @@ class CaminhaoController extends Controller
      */
     public function show()
     {
-        
-        $caminhao =  Tb_caminhao::all();
+        //função para listar um novo registro de veículo
 
-        return view('caminhao.show', ['caminhao' => $caminhao]);
+        $veiculo =  Tb_veiculo::all();
+
+        return view('veiculo.show', ['veiculo' => $veiculo]);
     }
 
     /**
@@ -82,11 +85,14 @@ class CaminhaoController extends Controller
      */
     public function edit($id)
     {
-        $caminhao = Tb_caminhao::findOrFail($id);
+
+        //função para listar um veiculo editavel
+
+        $veiculo = Tb_veiculo::findOrFail($id);
 
 
         
-        return view('caminhao.edit', ['caminhao'=>$caminhao]);
+        return view('veiculo.edit', ['veiculo'=>$veiculo]);
     }
 
     /**
@@ -98,10 +104,12 @@ class CaminhaoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $caminhao = Tb_caminhao::findOrFail($id);
+        //função para registrar o que foi editado no veículo
 
-        $caminhao->update([
-            'numero_caminhao' => $request->numero_caminhao,
+        $veiculo = Tb_veiculo::findOrFail($id);
+
+        $veiculo->update([
+            'numero_veiculo' => $request->numero_veiculo,
             'placa' => $request->placa, 
             'descricao' => $request->descricao,
             'marca' => $request->marca,
@@ -122,8 +130,11 @@ class CaminhaoController extends Controller
      */
     public function destroy($id)
     {
-        $caminhao=Tb_caminhao::findOrFail($id);
-        $caminhao->delete();
+
+        //função para excluir o veículo
+
+        $veiculo=Tb_veiculo::findOrFail($id);
+        $veiculo->delete();
 
         return view('home');
     }

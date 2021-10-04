@@ -36,4 +36,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
+    public function tb_abastecimento(){
+        return $this->hasMany('App\Models\Tb_Veiculo');
+    }
 }

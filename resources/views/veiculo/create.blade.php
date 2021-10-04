@@ -6,11 +6,11 @@
     <br><br>
     <h1 class="text-center display-6">Cadastrar Veículo</h1>
     <div class="w-auto p-3">
-        <form action="{{route('salvar_caminhao')}}" method="post">
+        <form action="{{route('salvar_veiculo')}}" method="post">
         @csrf
         <div class="form-group">
-            <label for="Número do Caminhao">Número do veículo</label>
-            <input type="text" class="form-control" name="numero_caminhao" id="numero_caminhao" required aria-describedby="emailHelp">
+            <label for="Número do veiculo">Número do veículo</label>
+            <input type="text" class="form-control" name="numero_veiculo" id="numero_veiculo" required aria-describedby="emailHelp">
         </div>
         <div class="form-group">
             <label for="Placa ">Placa do veículo</label>
@@ -33,11 +33,15 @@
             <input type="text" class="form-control" name="chassi" id="chassi"  required aria-describedby="emailHelp">
         </div>
         <div class="form-group">
-            <label for="exampleInputText">Ano</label>
+            <label for="exampleInputText">Eixo</label>
+            <input type="text" class="form-control" name="eixo" id="eixo"  required aria-describedby="emailHelp">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputText">Ano Modelo</label>
             <input type="text" class="form-control" name="ano" id="ano" required aria-describedby="emailHelp">
         </div>
         <div class="form-group">
-            <label for="exampleInputText">Fabricação</label>
+            <label for="exampleInputText">Ano de Fabricação</label>
             <input type="text" class="form-control" name="fabricacao" id="fabricacao" required aria-describedby="emailHelp">
         </div>
 

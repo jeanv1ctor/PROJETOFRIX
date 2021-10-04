@@ -13,14 +13,15 @@ class CreateModelCaminhoesTable extends Migration
      */
     public function up()
     {
-        Schema::create('tb_caminhao', function (Blueprint $table) {
+        Schema::create('tb_veiculo', function (Blueprint $table) {
             $table->id();
-            $table->integer('numero_caminhao');
+            $table->integer('numero_veiculo');
             $table->string('placa');
             $table->string('descricao');
             $table->string('marca');
             $table->string('modelo');
             $table->string('chassi');
+            $table->string('eixo');
             $table->integer('ano');
             $table->integer('fabricacao');
             $table->rememberToken();
@@ -35,6 +36,6 @@ class CreateModelCaminhoesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tb_caminhao');
+        Schema::dropIfExists('tb_veiculo');
     }
 }

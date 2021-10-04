@@ -73,5 +73,6 @@
     padding-left: 220px;
   }
 
-
-  
+  .table td, .table th {
+    min-width: 115px;
+}

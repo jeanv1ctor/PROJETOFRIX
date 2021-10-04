@@ -19,12 +19,12 @@
                     </a>
                     </li>
                     <li>
-                    <a href="{{route('cadastra_caminhao')}}">
+                    <a href="{{route('cadastra_veiculo')}}">
                         <i class="fa fa-tachometer" aria-hidden="true"></i> Cadastrar veículo
                     </a>
                     </li>
                     <li>
-                    <a href="{{route('lista_caminhao')}}">
+                    <a href="{{route('lista_veiculo')}}">
                         <i class="fa fa-users" aria-hidden="true"></i> Lista de veículos
                     </a>
                     </li>

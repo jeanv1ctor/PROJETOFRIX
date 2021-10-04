@@ -5,8 +5,9 @@ namespace App\Http\Controllers;
 use App\Abastecimento;
 use Illuminate\Http\Request;
 use App\Models\Tb_Abastecimento;
-use App\Models\Tb_Caminhao;
+use App\Models\Tb_Veiculo;
 use App\User;
+use App\Auth;
 
 class AbastecimentoController extends Controller
 {
@@ -38,10 +39,10 @@ class AbastecimentoController extends Controller
      */
     public function create()
     {
-        $caminhao =  Tb_caminhao::all();
+        $veiculo =  Tb_veiculo::all();
 
         
-        return view('abastecimento.create',  ['caminhao' => $caminhao]);
+        return view('abastecimento.create',  ['veiculo' => $veiculo]);
     }
 
     /**
@@ -53,14 +54,19 @@ class AbastecimentoController extends Controller
     public function store(Request $request)
     {
 
-        if (Tb_caminhao::where('numero_caminhao', $request->numero_caminhao)->first()){
+        $user = auth()->user();
+
+        if (Tb_veiculo::where('numero_veiculo', $request->numero_veiculo)->first()){
+
+          
 
             Tb_abastecimento::create([
-                'numero_caminhao' => $request->numero_caminhao,
+                'numero_veiculo' => $request->numero_veiculo,
                 'quantidade_abastecida' => $request->quantidade_abastecida, 
                 'tipo_combustivel'=>$request->tipo_combustivel,
                 'km' => $request->km,
-                'carga' => $request->carga
+                'carga' => $request->carga,
+                'user_id' => $user->id
             ]);
 
         }
@@ -84,6 +90,8 @@ class AbastecimentoController extends Controller
     public function show()
     {
         $abastecimento =  Tb_abastecimento::all();
+
+        //$donoAbastecimento = User::where('id', $user->id)->first()->toArray();
 
         return view('abastecimento.show', ['abastecimento' => $abastecimento]);
     }

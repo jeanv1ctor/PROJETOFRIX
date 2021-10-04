@@ -32,25 +32,25 @@ Route::group(['middleware'=>'auth'],function(){
     Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
 
     /*rota para cadastrar veiculo*/ 
-    Route::get('/caminhao/novo', 'CaminhaoController@create')->name('cadastra_caminhao');
+    Route::get('/veiculo/novo', 'veiculoController@create')->name('cadastra_veiculo');
 
     /*rota para enviar o  fomulario preenchido do cadastro*/
-    Route::post('/caminhao/novo', 'CaminhaoController@store')->name('salvar_caminhao');
+    Route::post('/veiculo/novo', 'veiculoController@store')->name('salvar_veiculo');
 
     /*rota para listar os veículos*/ 
-    Route::get('/caminhao/lista', 'CaminhaoController@show')->name('lista_caminhao');
+    Route::get('/veiculo/lista', 'veiculoController@show')->name('lista_veiculo');
 
 
     /*rota para a pagina de editar veículo*/
 
-    Route::get('/caminhao/editar/{id}', 'CaminhaoController@edit')->name('editar_caminhao');
+    Route::get('/veiculo/editar/{id}', 'veiculoController@edit')->name('editar_veiculo');
 
     /*rota para salvar a edição do veículo*/
 
-    Route::post('/caminhao/editar/{id}', 'CaminhaoController@update')->name('atualiza_caminhao');
+    Route::post('/veiculo/editar/{id}', 'veiculoController@update')->name('atualiza_veiculo');
 
     /*rota para excluir veículo*/
-    Route::get('/caminhao/excluir/{id}', 'CaminhaoController@destroy')->name('exclui_caminhao');
+    Route::get('/veiculo/excluir/{id}', 'veiculoController@destroy')->name('exclui_veiculo');
 
 
     /*rota para a pagina de registrar abastecimento*/

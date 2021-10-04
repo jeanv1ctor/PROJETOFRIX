@@ -11,7 +11,8 @@ class Tb_veiculo extends Model
 {
     
     //use HasFactory;
-    public $table = "tb_combustivel";
-    protected $fillable = [];
+    public $table = "tb_veiculo";
+    protected $fillable = ['numero_veiculo', 'placa', 'descricao', 'marca', 'modelo',
+    'chassi', 'eixo','ano', 'fabricacao'];
     
 }

@@ -14,8 +14,13 @@ class Tb_abastecimento extends Model
     
     //use HasFactory;
     public $table = "tb_abastecimento";
-    protected $fillable = ['numero_caminhao', 'quantidade_abastecida', 'tipo_combustivel', 'km', 'carga'];
+    protected $fillable = ['numero_veiculo', 'quantidade_abastecida', 'tipo_combustivel', 'km', 'carga', 'user_id'];
 
+
+
+    public function user(){
+        return $this->belongsto('App\User', 'user_id');
+    }
 }
     
 

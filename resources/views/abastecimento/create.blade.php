@@ -10,7 +10,7 @@
         <div class="alert alert-danger">
             {{ session('message') }}
         </div>
-     @endif
+    @endif
 
     <div class="w-auto p-3">
 
@@ -20,12 +20,12 @@
         @csrf
         <div class="form-group">
             <label for="exampleDataList" class="form-label">Número do veículo</label>
-            <input class="form-control" list="datalistOptions"  name="numero_caminhao" id="numero_caminhao" required placeholder="Digite para pesquisar...">
+            <input class="form-control" list="datalistOptions"  name="numero_veiculo" id="numero_veiculo" required placeholder="Digite para pesquisar..." autocomplete="off">
 
        
             <datalist id="datalistOptions">
-            @foreach($caminhao as $caminhao) 
-                <option value="{{$caminhao->numero_caminhao}}">
+            @foreach($veiculo as $veiculo) 
+                <option value="{{$veiculo->numero_veiculo}}">
             @endforeach
             </datalist>
         </div>

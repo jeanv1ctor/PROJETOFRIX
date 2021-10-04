@@ -6,8 +6,9 @@
     <br><br>
     <h1 class="text-center display-6">Histórico de Abastecimento</h1>
     <div class="w-auto p-3">
-        <table class="table table-striped">
-            <thead>
+
+        <table class="table table-bordered">
+            <thead class="table-dark">
                 <tr>
                 <th scope="col">Nº DO VEÍCULO</th>
                 <th scope="col">QUANTIDADE ABASTECIDA (LITROS)</th>
@@ -15,18 +16,20 @@
                 <th scope="col">KM</th>
                 <th scope="col">CARGA</th>
                 <th scope="col">DATA/HORÁRIO</th>
+               
                 </tr>
             </thead>
             
             @foreach($abastecimento as $abastecimento) 
             <tbody>
                 <tr>
-                <th scope="row">{{$abastecimento->numero_caminhao}}</th>
+                <th scope="row">{{$abastecimento->numero_veiculo}}</th>
                 <th>{{$abastecimento->quantidade_abastecida}}</th>
                 <th>{{$abastecimento->tipo_combustivel}}</th>
                 <th>{{$abastecimento->km}}</th>
                 <th>{{$abastecimento->carga}}</th>
                 <th>{{$abastecimento->created_at->format('d/m/y H:i:s')}}</th>>
+                
                 </tr>
             </tbody>
             @endforeach
