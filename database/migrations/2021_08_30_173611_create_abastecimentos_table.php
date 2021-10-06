@@ -20,6 +20,7 @@ class CreateAbastecimentosTable extends Migration
             $table->string('tipo_combustivel');
             $table->float('km');
             $table->integer('carga')->nullable();
+            $table->string('motorista');
             $table->timestamps();
         });
     }

@@ -53,6 +53,7 @@ class veiculoController extends Controller
             'marca' => $request->marca,
             'modelo' => $request->modelo,
             'chassi'=> $request->chassi,
+            'renavan' => $request->renavan,
             'eixo'=> $request->eixo, 
             'ano' => $request->ano, 
             'fabricacao'=>$request->fabricacao

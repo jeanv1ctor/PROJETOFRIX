@@ -66,7 +66,8 @@ class AbastecimentoController extends Controller
                 'tipo_combustivel'=>$request->tipo_combustivel,
                 'km' => $request->km,
                 'carga' => $request->carga,
-                'user_id' => $user->id
+                'user_id' => $user->id,
+                'motorista' => $request->motorista
             ]);
 
         }
