@@ -12,39 +12,47 @@
                 @csrf
                 <div class="form-group row">
                     <label for="Número do veiculo">Número do veículo</label>
-                    <input type="text" class="form-control" name="numero_veiculo" id="numero_veiculo" value="{{$veiculo->numero_veiculo}}" aria-describedby="emailHelp">
+                    <input type="text" class="form-control" name="numero_veiculo" id="numero_veiculo" value="{{$veiculo->numero_veiculo}}">
                 </div>
                 <div class="form-group row">
                     <label for="Placa ">Placa do veículo</label>
-                    <input type="text" class="form-control" name="placa" id="placa" value="{{$veiculo->placa}}" aria-describedby="emailHelp">
+                    <input type="text" class="form-control" name="placa" id="placa" value="{{$veiculo->placa}}" >
                 </div>
                 <div class="form-group row">
-                    <label for="exampleInputText">Descrição</label>
-                    <input type="text" class="form-control" name="descricao" id="descricao" value="{{$veiculo->descricao}}" aria-describedby="emailHelp">
+                    <label for="Descricao">Descrição</label>
+                    <input type="text" class="form-control" name="descricao" id="descricao" value="{{$veiculo->descricao}}" >
                 </div>
                 <div class="form-group row">
-                    <label for="exampleInputText">Marca</label>
-                    <input type="text" class="form-control" name="marca" id="marca" value="{{$veiculo->marca}}" aria-describedby="emailHelp">
+                    <label for="Marca">Marca</label>
+                    <input type="text" class="form-control" name="marca" id="marca" value="{{$veiculo->marca}}" >
                 </div>
                 <div class="form-group row">
-                    <label for="exampleInputText">Modelo</label>
-                    <input type="text" class="form-control" name="modelo" id="modelo" value="{{$veiculo->modelo}}" aria-describedby="emailHelp">
+                    <label for="Modelo">Modelo</label>
+                    <input type="text" class="form-control" name="modelo" id="modelo" value="{{$veiculo->modelo}}" >
                 </div>
                 <div class="form-group row">
-                    <label for="exampleInputText">Chassi</label>
-                    <input type="text" class="form-control" name="chassi" id="chassi"  value="{{$veiculo->chassi}}" aria-describedby="emailHelp">
+                    <label for="Chassi">Chassi</label>
+                    <input type="text" class="form-control" name="chassi" id="chassi"  value="{{$veiculo->chassi}}" >
                 </div>
                 <div class="form-group row">
-                    <label for="exampleInputText">Eixo</label>
-                    <input type="text" class="form-control" name="eixo" id="eixo"  value="{{$veiculo->eixo}}" aria-describedby="emailHelp">
+                    <label for="Renavan">Renavan</label>
+                    <input type="text" class="form-control" name="renavan" id="renavan"  value="{{$veiculo->renavan}}" >
                 </div>
                 <div class="form-group row">
-                    <label for="exampleInputText">Ano Modelo</label>
-                    <input type="text" class="form-control" name="ano" id="ano" value="{{$veiculo->ano}}" aria-describedby="emailHelp">
+                    <label for="Eixo">Eixo</label>
+                    <input type="text" class="form-control" name="eixo" id="eixo"  value="{{$veiculo->eixo}}" >
                 </div>
                 <div class="form-group row">
-                    <label for="exampleInputText">Ano de Fabricação</label>
-                    <input type="text" class="form-control" name="fabricacao" id="fabricacao" value="{{$veiculo->fabricacao}}" aria-describedby="emailHelp">
+                    <label for="Autonomia">Autonomia</label>
+                    <input type="text" class="form-control" name="autonomia" id="autonomia"  required >
+                </div>
+                <div class="form-group row">
+                    <label for="Modelo">Ano Modelo</label>
+                    <input type="text" class="form-control" name="ano" id="ano" value="{{$veiculo->ano}}" >
+                </div>
+                <div class="form-group row">
+                    <label for="Fabricacao">Ano de Fabricação</label>
+                    <input type="text" class="form-control" name="fabricacao" id="fabricacao" value="{{$veiculo->fabricacao}}">
                 </div>
 
 
@@ -56,5 +64,3 @@
    </div>    
 </div>
 @endsection
-
-

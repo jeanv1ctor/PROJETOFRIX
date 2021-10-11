@@ -21,7 +21,6 @@ class CreateModelCaminhoesTable extends Migration
             $table->string('marca');
             $table->string('modelo');
             $table->string('chassi');
-            $table->string('renavan');
             $table->string('eixo');
             $table->integer('ano');
             $table->integer('fabricacao');

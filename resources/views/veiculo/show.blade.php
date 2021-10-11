@@ -18,7 +18,9 @@
                         <th scope="col">MARCA</th>
                         <th scope="col">MODELO</th>
                         <th scope="col">CHASSI</th>
+                        <th scope="col">RENAVAN</th>
                         <th scope="col">EIXO</th>
+                        <th scope="col">AUTONOMIA</th>
                         <th scope="col">MODELO</th>
                         <th scope="col">FABRICAÇÃO</th>
                         </tr>
@@ -33,7 +35,9 @@
                         <td>{{$veiculo->marca}}</td>
                         <td>{{$veiculo->modelo}}</td>
                         <td>{{$veiculo->chassi}}</td>
+                        <td>{{$veiculo->renavan}}</td>
                         <td>{{$veiculo->eixo}}</td>
+                        <td>{{$veiculo->autonomia}}</td>
                         <td>{{$veiculo->ano}}</td>
                         <td>{{$veiculo->fabricacao}}</td>
                         <td><a class="btn btn-success" href="{{route('editar_veiculo', ['id'=>$veiculo->id])}}" role="buttons">Editar</a></td>

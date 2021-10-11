@@ -22,5 +22,7 @@ class Tb_abastecimento extends Model
         return $this->belongsto('App\User', 'user_id');
     }
 }
+
+
     
 

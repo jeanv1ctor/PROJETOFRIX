@@ -18,7 +18,7 @@
                         <th scope="col">KM</th>
                         <th scope="col">CARGA</th>
                         <th scope="col">DATA/HORÁRIO</th>
-                    
+                        <th scope="col">MOTORISTA</th>
                         </tr>
                     </thead>
                     
@@ -31,7 +31,7 @@
                         <th>{{$abastecimento->km}}</th>
                         <th>{{$abastecimento->carga}}</th>
                         <th>{{$abastecimento->created_at->format('d/m/y H:i:s')}}</th>>
-                        
+                        <th>{{$abastecimento->motorista}}</th>>
                         </tr>
                     </tbody>
                     @endforeach

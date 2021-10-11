@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAbastecimentosTable extends Migration
+class CreateTbAsbastecimentoExtsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,15 @@ class CreateAbastecimentosTable extends Migration
      */
     public function up()
     {
-        Schema::create('tb_abastecimento', function (Blueprint $table) {
+        Schema::create('tb_asbastecimentoext', function (Blueprint $table) {
             $table->id();
             $table->integer('numero_veiculo');
             $table->float('quantidade_abastecida');
             $table->string('tipo_combustivel');
             $table->float('km');
             $table->integer('carga')->nullable();
+            $table->integer('num_nota');
+            $table->string('nome_posto');
             $table->timestamps();
         });
     }
@@ -31,6 +33,6 @@ class CreateAbastecimentosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tb_abastecimento');
+        Schema::dropIfExists('tb_asbastecimentoext');
     }
 }

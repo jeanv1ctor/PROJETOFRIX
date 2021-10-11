@@ -12,31 +12,31 @@
             PROJETO FRIX
             </div>
                 <ul class="sidebar-navigation">
-                    <li class="header">MENU</li>
+                    <li class="header"><h6>MENU</h6></li>
                     <li>
                     <a href="{{route('home')}}">
-                        <i class="fa fa-home" aria-hidden="true"></i> Inicio
+                        <i class="fa fa-home" aria-hidden="true">Inicio</i> 
                     </a>
                     </li>
                     <li>
                     <a href="{{route('cadastra_veiculo')}}">
-                        <i class="fa fa-tachometer" aria-hidden="true"></i> Cadastrar veículo
+                        <i class="fa fa-tachometer" aria-hidden="true">Cadastrar veículo</i> 
                     </a>
                     </li>
                     <li>
                     <a href="{{route('lista_veiculo')}}">
-                        <i class="fa fa-users" aria-hidden="true"></i> Lista de veículos
+                        <i class="fa fa-users" aria-hidden="true">Lista de veículos</i> 
                     </a>
                     </li>
                     <li>
                     <a href="{{route('abastece')}}">
-                        <i class="fa fa-cog" aria-hidden="true"></i> Abastecimento
+                        <i class="fa fa-cog" aria-hidden="true">Abastecimento</i> 
                     </a>
                     </li>  
                     
                     <li class="deslogar">
                         <a class="log-out-btn" href="#" onclick="event.preventDefault();document.getElementById('logout-form').submit();"> 
-                            <i class="fa fa-cog" aria-hidden="true"></i> Sair
+                            <i class="fa fa-cog" aria-hidden="true">Sair</i> 
                         </a>
 
                     </li>   
@@ -51,6 +51,7 @@
 <body>
     @yield('content')
     <script src="{{url('assets/bootstrap/js/bootstrap.js')}}"></script>
+    
 </body>
 </html>
 

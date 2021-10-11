@@ -54,7 +54,8 @@ class veiculoController extends Controller
             'modelo' => $request->modelo,
             'chassi'=> $request->chassi,
             'renavan' => $request->renavan,
-            'eixo'=> $request->eixo, 
+            'eixo'=> $request->eixo,
+            'autonomia' => $request->autonomia, 
             'ano' => $request->ano, 
             'fabricacao'=>$request->fabricacao
         ]);
@@ -115,7 +116,10 @@ class veiculoController extends Controller
             'descricao' => $request->descricao,
             'marca' => $request->marca,
             'modelo' => $request->modelo,
-            'chassi'=> $request->chassi, 
+            'chassi'=> $request->chassi,
+            'renavan' => $request->renavan,
+            'eixo' => $request->eixo,
+            'autonomia' => $request->autonomia, 
             'ano' => $request->ano, 
             'fabricacao'=>$request->fabricacao
         ]);

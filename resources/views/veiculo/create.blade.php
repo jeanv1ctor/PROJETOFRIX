@@ -12,39 +12,47 @@
                 @csrf
                 <div class="form-group row">
                     <label for="Número do veiculo">Número do veículo</label>
-                    <input type="text" class="form-control" name="numero_veiculo" id="numero_veiculo" required aria-describedby="emailHelp">
+                    <input type="text" class="form-control" name="numero_veiculo" id="numero_veiculo" required>
                 </div>
                 <div class="form-group row">
                     <label for="Placa ">Placa do veículo</label>
-                    <input type="text" class="form-control" name="placa" id="placa" required aria-describedby="emailHelp">
+                    <input type="text" class="form-control" name="placa" id="placa" required >
                 </div>
                 <div class="form-group row">
-                    <label for="exampleInputText">Descrição</label>
-                    <input type="text" class="form-control" name="descricao" id="descricao" required aria-describedby="emailHelp">
+                    <label for="Descrição">Descrição</label>
+                    <input type="text" class="form-control" name="descricao" id="descricao" required >
                 </div>
                 <div class="form-group row">
-                    <label for="exampleInputText">Marca</label>
-                    <input type="text" class="form-control" name="marca" id="marca"  required aria-describedby="emailHelp">
+                    <label for="Marca">Marca</label>
+                    <input type="text" class="form-control" name="marca" id="marca"  required >
                 </div>
                 <div class="form-group row">
-                    <label for="exampleInputText">Modelo</label>
-                    <input type="text" class="form-control" name="modelo" id="modelo" required aria-describedby="emailHelp">
+                    <label for="Modelo">Modelo</label>
+                    <input type="text" class="form-control" name="modelo" id="modelo" required >
                 </div>
                 <div class="form-group row">
-                    <label for="exampleInputText">Chassi</label>
-                    <input type="text" class="form-control" name="chassi" id="chassi"  required aria-describedby="emailHelp">
+                    <label for="Chassi">Chassi</label>
+                    <input type="text" class="form-control" name="chassi" id="chassi"  required >
                 </div>
                 <div class="form-group row">
-                    <label for="exampleInputText">Eixo</label>
-                    <input type="text" class="form-control" name="eixo" id="eixo"  required aria-describedby="emailHelp">
+                    <label for="Renavan">Renavan</label>
+                    <input type="text" class="form-control" name="renavan" id="renavan"  required>
                 </div>
                 <div class="form-group row">
-                    <label for="exampleInputText">Ano Modelo</label>
-                    <input type="text" class="form-control" name="ano" id="ano" required aria-describedby="emailHelp">
+                    <label for="Eixo">Eixo</label>
+                    <input type="text" class="form-control" name="eixo" id="eixo"  required >
                 </div>
                 <div class="form-group row">
-                    <label for="exampleInputText">Ano de Fabricação</label>
-                    <input type="text" class="form-control" name="fabricacao" id="fabricacao" required aria-describedby="emailHelp">
+                    <label for="Autonomia">Autonomia</label>
+                    <input type="text" class="form-control" name="autonomia" id="autonomia"  required >
+                </div>
+                <div class="form-group row">
+                    <label for="Modelo">Ano Modelo</label>
+                    <input type="text" class="form-control" name="ano" id="ano" required >
+                </div>
+                <div class="form-group row">
+                    <label for="Fabricação">Ano de Fabricação</label>
+                    <input type="text" class="form-control" name="fabricacao" id="fabricacao" required >
                 </div>
 
 
