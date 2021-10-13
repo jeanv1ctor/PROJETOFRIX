@@ -53,16 +53,25 @@ Route::group(['middleware'=>'auth'],function(){
     Route::get('/veiculo/excluir/{id}', 'veiculoController@destroy')->name('exclui_veiculo');
 
 
-    /*rota para a pagina de registrar abastecimento*/
+    /*rota para a pagina de registrar abastecimento interno*/
 
     Route::get('/abastecimento/registrar', 'AbastecimentoController@create')->name('abastece');
 
 
-    /*rota para enviar o formulario preenchido do abastecimento*/ 
+    /*rota para enviar o formulario preenchido do abastecimento interno*/ 
     Route::post('/abastecimento/registrar', 'AbastecimentoController@store')->name('salvar_abastecimento');
 
+    /**Rota para a pagina de registrar abastecimento externo */
+    Route::get('/abastecimentoext/registrar', 'AsbastecimentoExtController@create')->name('abasteceExt');
 
-    /*rota para  listar abastecimento*/
+    /**Rota para enviar o forumalrio preenchido do abastecimento externo */
+    Route::post('/abastecimentoext/registrar', 'AsbastecimentoExtController@store')->name('salvar_abastecimentoExt');
+
+    /**Rota para listar abastecimento externo */
+
+    Route::get('/abastecimentoext/historico', 'AsbastecimentoExtController@show')->name('lista_abastecimentoExt');
+
+    /*rota para  listar abastecimento interno */
 
     Route::get('/abastecimento/historico', 'AbastecimentoController@show')->name('lista_abastecimento');
 

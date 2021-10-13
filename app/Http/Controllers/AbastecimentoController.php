@@ -92,7 +92,7 @@ class AbastecimentoController extends Controller
     {
         $abastecimento =  Tb_abastecimento::all();
 
-        //$donoAbastecimento = User::where('id', $user->id)->first()->toArray();
+       
 
         return view('abastecimento.show', ['abastecimento' => $abastecimento]);
     }

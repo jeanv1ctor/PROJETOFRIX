@@ -34,6 +34,12 @@
                     </a>
                     </li>  
                     
+                    <li>
+                    <a href="{{route('abasteceExt')}}">
+                        <i class="fa fa-cog" aria-hidden="true">Abastecimento Ext</i> 
+                    </a>
+                    </li>  
+
                     <li class="deslogar">
                         <a class="log-out-btn" href="#" onclick="event.preventDefault();document.getElementById('logout-form').submit();"> 
                             <i class="fa fa-cog" aria-hidden="true">Sair</i> 

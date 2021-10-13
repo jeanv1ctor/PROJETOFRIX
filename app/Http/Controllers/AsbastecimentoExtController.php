@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\AbastecimentoExt;
+
 use Illuminate\Http\Request;
-use App\Models\Tb_AbastecimentoExt;
+use App\Models\Tb_Abastecimentoext;
 use App\Models\Tb_Veiculo;
 use App\User;
 use App\Auth;
@@ -12,7 +12,7 @@ use App\Auth;
 
 
 
-class TbAsbastecimentoExtController extends Controller
+class AsbastecimentoExtController extends Controller
 {
       /**
      * Display a listing of the resource.
@@ -45,7 +45,7 @@ class TbAsbastecimentoExtController extends Controller
         $veiculo =  Tb_veiculo::all();
 
         
-        return view('abastecimento.create',  ['veiculo' => $veiculo]);
+        return view('abastecimentoext.create',  ['veiculo' => $veiculo]);
     }
 
     /**
@@ -63,22 +63,22 @@ class TbAsbastecimentoExtController extends Controller
 
           
 
-            Tb_abastecimentoExt::create([
+            Tb_abastecimentoext::create([
                 'numero_veiculo' => $request->numero_veiculo,
                 'quantidade_abastecida' => $request->quantidade_abastecida, 
                 'tipo_combustivel'=>$request->tipo_combustivel,
                 'km' => $request->km,
                 'carga' => $request->carga,
-                'user_id' => $user->id,
                 'motorista' => $request->motorista,
                 'num_nota' => $request->num_nota,
+                'valor_nota' => $request->valor_nota,
                 'nome_posto' => $request->nome_posto
             ]);
 
         }
     
         else{
-             // It does not exist
+             // se não existir
              return redirect()->back()->with(['message' => 'Veículo não cadastrado!']);
 
         }
@@ -90,16 +90,16 @@ class TbAsbastecimentoExtController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Abastecimento  $abastecimento
+     * @param  \App\AbastecimentoExt  $abastecimentoExt
      * @return \Illuminate\Http\Response
      */
     public function show()
     {
-        $abastecimento =  Tb_abastecimentoExt::all();
+        $abastecimentoExt =  Tb_AbastecimentoExt::all();
 
-        //$donoAbastecimento = User::where('id', $user->id)->first()->toArray();
+       
 
-        return view('abastecimento.show', ['abastecimento' => $abastecimento]);
+        return view('abastecimentoext.show', ['abastecimentoExt' => $abastecimentoExt]);
     }
 
 }

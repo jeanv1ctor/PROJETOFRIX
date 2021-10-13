@@ -13,7 +13,7 @@ class CreateTbAsbastecimentoExtsTable extends Migration
      */
     public function up()
     {
-        Schema::create('tb_asbastecimentoext', function (Blueprint $table) {
+        Schema::create('tb_abastecimentoext', function (Blueprint $table) {
             $table->id();
             $table->integer('numero_veiculo');
             $table->float('quantidade_abastecida');
@@ -21,7 +21,9 @@ class CreateTbAsbastecimentoExtsTable extends Migration
             $table->float('km');
             $table->integer('carga')->nullable();
             $table->integer('num_nota');
+            $table->float('valor_nota');
             $table->string('nome_posto');
+            $table->string('motorista');
             $table->timestamps();
         });
     }
