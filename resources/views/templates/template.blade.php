@@ -15,28 +15,33 @@
                     <li class="header"><h6>MENU</h6></li>
                     <li>
                     <a href="{{route('home')}}">
-                        <i class="fa fa-home" aria-hidden="true">Inicio</i> 
+                        Inicio 
                     </a>
                     </li>
                     <li>
                     <a href="{{route('cadastra_veiculo')}}">
-                        <i class="fa fa-tachometer" aria-hidden="true">Cadastrar veículo</i> 
+                        Cadastrar veículo
                     </a>
                     </li>
                     <li>
                     <a href="{{route('lista_veiculo')}}">
-                        <i class="fa fa-users" aria-hidden="true">Lista de veículos</i> 
+                        Lista de veículos
+                    </a>
+                    </li>
+                    <li>
+                    <a href="{{route('km_saida')}}">
+                       Registrar KM Saída
                     </a>
                     </li>
                     <li>
                     <a href="{{route('abastece')}}">
-                        <i class="fa fa-cog" aria-hidden="true">Abastecimento</i> 
+                        Abastecimento
                     </a>
                     </li>  
                     
                     <li>
                     <a href="{{route('abasteceExt')}}">
-                        <i class="fa fa-cog" aria-hidden="true">Abastecimento Ext</i> 
+                        Abastecimento Ext</i> 
                     </a>
                     </li>  
 

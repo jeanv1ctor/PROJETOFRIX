@@ -5,7 +5,7 @@
 
 <div class="container h-100">
     <br><br>
-    <h1 class="text-center display-6">Registrar Abastecimento Interno</h1>
+    <h1 class="text-center display-6">Registrar KM de Saída do Veículo</h1>
 
     <div class="row justify-content-center">
         <div class="col-md-8">

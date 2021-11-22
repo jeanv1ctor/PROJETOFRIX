@@ -36,8 +36,8 @@
                         <th>{{$abastecimentoExt->nome_posto}}</th>
                         <th>{{$abastecimentoExt->num_nota}}</th>
                         <th>{{$abastecimentoExt->valor_nota}}</th>
-                        <th>{{$abastecimentoExt->created_at->format('d/m/y H:i:s')}}</th>>
-                        <th>{{$abastecimentoExt->motorista}}</th>>
+                        <th>{{$abastecimentoExt->created_at->format('d/m/y H:i:s')}}</th>
+                        <th>{{$abastecimentoExt->motorista}}</th>
                         </tr>
                     </tbody>
                     @endforeach

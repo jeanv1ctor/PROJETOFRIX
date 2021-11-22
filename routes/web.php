@@ -75,4 +75,8 @@ Route::group(['middleware'=>'auth'],function(){
 
     Route::get('/abastecimento/historico', 'AbastecimentoController@show')->name('lista_abastecimento');
 
+    /** Rota para a pagina de registro da quilometragem de saida */
+
+    Route::get('/kmdesaida/registrar', 'KmsaidaController@create')->name('km_saida');
+
 });
