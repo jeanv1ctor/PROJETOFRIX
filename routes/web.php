@@ -79,4 +79,12 @@ Route::group(['middleware'=>'auth'],function(){
 
     Route::get('/kmdesaida/registrar', 'KmsaidaController@create')->name('km_saida');
 
+    /** Rota para a enviar o formulaario de registro da quilometragem de saida */
+
+    Route::post('/kmdesaida/registrar', 'KmsaidaController@store')->name('salvar_kmsaida');
+
+    /** Rota para a enviar o formulaario de registro da quilometragem de saida */
+
+    Route::get('/kmdesaida/listar', 'KmsaidaController@show')->name('lista_kmsaida');
+
 });

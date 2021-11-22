@@ -13,15 +13,12 @@ class CreateRegistrakmsTable extends Migration
      */
     public function up()
     {
-        Schema::create('Tb_registrokm', function (Blueprint $table) {
+        Schema::create('Tb_kmsaida', function (Blueprint $table) {
             $table->id();
             $table->integer('numero_veiculo');
-            $table->float('quantidade_abastecida');
-            $table->string('tipo_combustivel');
-            $table->float('Kmsaida');
-            $table->string('motorista');
-            
-            $table->integer('carga')->nullable();
+            $table->float('km_saida');
+            $table->string('motorista');    
+            $table->integer('carga');
             $table->timestamps();
         });
     }
@@ -33,6 +30,6 @@ class CreateRegistrakmsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Tb_Kmsaida');
+        Schema::dropIfExists('Tb_kmsaida');
     }
 }

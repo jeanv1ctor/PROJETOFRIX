@@ -55,13 +55,10 @@ class KmsaidaController extends Controller
 
           
 
-            Tb_abastecimento::create([
+            Tb_Kmsaida::create([
                 'numero_veiculo' => $request->numero_veiculo,
-                'quantidade_abastecida' => $request->quantidade_abastecida, 
-                'tipo_combustivel'=>$request->tipo_combustivel,
-                'km' => $request->km,
+                'km_saida' => $request->km_saida,
                 'carga' => $request->carga,
-                'user_id' => $user->id,
                 'motorista' => $request->motorista
             ]);
 
@@ -82,9 +79,13 @@ class KmsaidaController extends Controller
      * @param  \App\Kmsaida  $Kmsaida
      * @return \Illuminate\Http\Response
      */
-    public function show(Kmsaida $Kmsaida)
+    public function show()
     {
-        //
+        $kmsaida =  Tb_Kmsaida::all();
+
+       
+
+        return view('kmsaida.show', ['kmsaida' => $kmsaida]);
     }
 
     /**
